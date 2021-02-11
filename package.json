@@ -1,0 +1,33 @@
+{
+  "name": "employeemanagementsystem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --verbose test/*",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eamon02/Employee-Management-System"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eamon02/Employee-Management-System/issues"
+  },
+  "homepage": "https://github.com/Eamon02/Employee-Management-System",
+  "dependencies": {
+    "inquirer": "^6.5.2",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0",
+    "nodemon": "^2.0.4"
+  }
+}
