@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 // Import the mysql package
 const mysql = require('mysql');
 
-// const table = require("console.table")
+//const table = require("console.table")
 
 // Connect to database using a localhost connection
 const connection = mysql.createConnection({
@@ -39,15 +39,16 @@ async function questions(){
         choices: ['Update', 'View', 'Delete']
       }
     ]);
+    // console.log(answer.want)
     switch (answer.want) {
 
-      case Update:
+      case 'Update':
       return Update();
 
-      case View:
+      case 'View':
         return View();
 
-      case Delete:
+      case 'Delete':
         return Delete();
     }
   }catch (error) {
@@ -58,9 +59,13 @@ async function questions(){
 
 
 function Update() {
-  console.log('updating')
-  
-};
+  // console.log('update employee managers');
+  connection.query("SELECT * FROM employee", function(err, res) {
+    if (err) throw err;
+    console.log(res);
+    connection.end();
+  });
+}
 
 function View() {
   console.log('viewing')
